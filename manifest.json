@@ -1,0 +1,30 @@
+{
+    "name": "Website-blocker",
+    "version": "1.0.0",
+    "description": "Website Blocker",
+    "manifest_version": 3,
+    "author": "Leandra Nealer",
+    "background": {
+        "service_worker": "service_worker.js"
+    },
+    "declarative_net_request": {
+    "rule_resources": [
+        {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rule1.json"
+        }
+    ]
+    },
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "declarativeNetRequestWithHostAccess"
+    ],
+    "host_permissions": [
+        "*://*.reddit.com/", 
+        "https://en.wikipedia.org/", 
+        "*://*.instagram.com/",
+        "*://*.facebook.com/"
+    ]
+}
